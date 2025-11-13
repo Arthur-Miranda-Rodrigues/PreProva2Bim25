@@ -18,6 +18,7 @@ jobs:
            if ["$(date +%u)" -eq 6]; then
              echo "Hoje é sábado!"
              "Excutando tarefas de sábado..."
+             "Aproveitando o momento com a fámilia"
 
            else
               echo "Hoje não é sábado"
