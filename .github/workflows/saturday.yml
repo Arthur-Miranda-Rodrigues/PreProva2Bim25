@@ -1,0 +1,23 @@
+name: Sábado
+
+on:
+  schedule:
+      - cron: '0 12 * * 6'
+  workflow_dispatch:
+
+jobs:
+ build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: avisar quando é sábado
+        run: |
+          if ["$(date +%u)" -eq 6]; then
+             echo "Hoje é sábado!"
+             "Excutando tarefas de sábado"
+          else
+             echo "Hoje não é sábado"
+           fi
