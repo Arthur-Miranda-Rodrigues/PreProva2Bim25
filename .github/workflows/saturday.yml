@@ -15,9 +15,10 @@ jobs:
 
       - name: avisar quando é sábado
         run: |
-          if ["$(date +%u)" -eq 6]; then
+           if ["$(date +%u)" -eq 6]; then
              echo "Hoje é sábado!"
-             "Excutando tarefas de sábado"
-          else
-             echo "Hoje não é sábado"
+             "Excutando tarefas de sábado..."
+
+           else
+              echo "Hoje não é sábado"
            fi
